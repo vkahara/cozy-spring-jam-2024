@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://misc/josh1.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://battle.gd" type="Script" id=3]
 [ext_resource path="res://EnemyHealth.gd" type="Script" id=4]
 [ext_resource path="res://Attack.gd" type="Script" id=5]
+[ext_resource path="res://misc/dickhead.png" type="Texture" id=6]
+[ext_resource path="res://PowerBar.gd" type="Script" id=7]
+[ext_resource path="res://Button.gd" type="Script" id=8]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -57,10 +60,13 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="CanvasLayer/Panel2"]
-margin_left = 49.4975
+margin_left = 52.3259
 margin_top = 18.3848
-margin_right = 149.497
+margin_right = 152.326
 margin_bottom = 49.3848
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel2/Button"]
 margin_right = 40.0
@@ -78,13 +84,52 @@ __meta__ = {
 }
 
 [node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/EnemyHealth"]
-margin_left = 45.2548
-margin_top = 59.397
-margin_right = 109.255
-margin_bottom = 123.397
+margin_left = 29.2186
+margin_top = 32.67
+margin_right = 377.219
+margin_bottom = 367.67
 value = 100.0
 texture_progress = ExtResource( 2 )
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="CanvasLayer"]
+margin_left = 350.129
+margin_top = 165.111
+margin_right = 721.129
+margin_bottom = 426.111
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PowerBar" type="ProgressBar" parent="CanvasLayer/Panel3"]
+margin_left = 43.0
+margin_top = 52.0
+margin_right = 339.0
+margin_bottom = 116.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel3"]
+margin_left = 112.253
+margin_top = 151.235
+margin_right = 272.253
+margin_bottom = 224.235
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel3/Button"]
+margin_right = 156.0
+margin_bottom = 73.0
+text = "päristä"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -95,6 +140,6 @@ texture = ExtResource( 1 )
 flip_h = true
 
 [node name="enemy" type="Sprite" parent="."]
-position = Vector2( 905.097, 73.5391 )
-scale = Vector2( 20, 10 )
-texture = ExtResource( 2 )
+position = Vector2( 702.186, 193.723 )
+scale = Vector2( 2, 1 )
+texture = ExtResource( 6 )
