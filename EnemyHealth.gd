@@ -20,3 +20,9 @@ func _on_attack_made(damage):
 
 func die():
 	print("Enemy defeated!")
+	var game_end_panel = get_node("/root/Node2D/CanvasLayer/GameEndPanel")
+	if game_end_panel:
+		game_end_panel.show()
+	else:
+		print("GameEndPanel not found. Check the node path.")
+	# Handle other enemy defeat logic if necessary.

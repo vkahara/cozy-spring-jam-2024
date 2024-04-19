@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://misc/josh1.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Button.gd" type="Script" id=8]
 [ext_resource path="res://misc/bar.png" type="Texture" id=9]
 [ext_resource path="res://Panel3.gd" type="Script" id=10]
+[ext_resource path="res://GameEndPanel.gd" type="Script" id=11]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -138,6 +139,27 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="GameEndPanel" type="Panel" parent="CanvasLayer"]
+margin_right = 1028.0
+margin_bottom = 603.0
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/GameEndPanel"]
+margin_left = 136.154
+margin_top = 138.823
+margin_right = 850.154
+margin_bottom = 425.823
+
+[node name="Label" type="Label" parent="CanvasLayer/GameEndPanel/Button"]
+margin_right = 705.0
+margin_bottom = 286.0
+text = "continue"
+align = 1
+valign = 1
 
 [node name="Josh" type="Sprite" parent="."]
 position = Vector2( 147.078, 463.862 )
