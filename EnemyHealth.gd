@@ -1,8 +1,22 @@
+# EnemyHealth.gd
+
 extends TextureProgress
 
-# Enemy's maximum health
-var max_health = 100
+var max_health = 100  # Maximum health
 
 func _ready():
-	value = max_health  # This sets the current fill of the progress bar
-	max_value = max_health  # This sets the maximum value of the progress bar
+	value = max_health
+	max_value = max_health
+
+	# Connect to the PowerBar's attack_made signal to receive damage.
+	# The PowerBar is located under a sibling node called Panel3.
+	var power_bar = get_node("../../Panel3/PowerBar")
+	power_bar.connect("attack_made", self, "_on_attack_made")
+
+func _on_attack_made(damage):
+	value -= damage
+	if value <= 0:
+		die()
+
+func die():
+	print("Enemy defeated!")
