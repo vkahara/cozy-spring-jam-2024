@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wasd.png-f0cebf55ef24ce451fad50d2af5a69ac.stex"
+path="res://.import/dickhead.png-5fc9f4c8fd35202e95587776a40522c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://misc/wasd.png"
-dest_files=[ "res://.import/wasd.png-f0cebf55ef24ce451fad50d2af5a69ac.stex" ]
+source_file="res://misc/dickhead.png"
+dest_files=[ "res://.import/dickhead.png-5fc9f4c8fd35202e95587776a40522c6.stex" ]
 
 [params]
 
