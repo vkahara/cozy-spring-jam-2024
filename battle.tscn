@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://misc/josh1.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://PowerBar.gd" type="Script" id=7]
 [ext_resource path="res://Button.gd" type="Script" id=8]
 [ext_resource path="res://misc/bar.png" type="Texture" id=9]
+[ext_resource path="res://Panel3.gd" type="Script" id=10]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -103,6 +104,7 @@ margin_left = 350.129
 margin_top = 165.111
 margin_right = 721.129
 margin_bottom = 426.111
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
