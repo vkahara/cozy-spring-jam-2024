@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://misc/josh1.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://misc/bar.png" type="Texture" id=9]
 [ext_resource path="res://Panel3.gd" type="Script" id=10]
 [ext_resource path="res://GameEndPanel.gd" type="Script" id=11]
+[ext_resource path="res://audio/hit.mp3" type="AudioStream" id=12]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -67,9 +68,6 @@ margin_left = 52.3259
 margin_top = 18.3848
 margin_right = 152.326
 margin_bottom = 49.3848
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel2/Button"]
 margin_right = 40.0
@@ -106,9 +104,6 @@ margin_top = 165.111
 margin_right = 721.129
 margin_bottom = 426.111
 script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="PowerBar" type="ProgressBar" parent="CanvasLayer/Panel3"]
 margin_left = 43.0
@@ -126,9 +121,9 @@ margin_top = 151.235
 margin_right = 272.253
 margin_bottom = 224.235
 script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Panel3/Button"]
+stream = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel3/Button"]
 margin_right = 156.0
