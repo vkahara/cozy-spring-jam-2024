@@ -10,6 +10,8 @@ var vertical_velocity = 19.0
 var max_flaps = 5  # Maximum number of flaps before needing to land
 var flaps_left = max_flaps  # Current number of flaps left
 
+var sound_played = false
+
 # Physics process runs every fixed frame
 func _physics_process(delta):
 	var forward_backward = 0
@@ -29,6 +31,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("flap") and flaps_left > 0:
 		vertical_velocity = flap_power
 		flaps_left -= 1  # Decrease flap count
+		$AudioStreamPlayer3D.play()
+
 
 	# Apply gravity to the vertical velocity
 	vertical_velocity += gravity * delta
