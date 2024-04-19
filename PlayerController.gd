@@ -1,10 +1,10 @@
 extends KinematicBody
 
 # Movement speed, rotation speed, gravity, and jump power.
-var speed = 400.0
+var speed = 800.0
 var rotation_speed = 5.0
-var gravity = -220.0
-var flap_power = 120.0
+var gravity = -650
+var flap_power = 550.0
 var vertical_velocity = 19.0
 
 var max_flaps = 5  # Maximum number of flaps before needing to land
