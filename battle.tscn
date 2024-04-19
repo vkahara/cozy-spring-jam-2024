@@ -1,43 +1,43 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://misc/josh1.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://battle.gd" type="Script" id=3]
+[ext_resource path="res://EnemyHealth.gd" type="Script" id=4]
+[ext_resource path="res://Attack.gd" type="Script" id=5]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PlayerHealth" type="TextureProgress" parent="CanvasLayer"]
-margin_left = 112.0
-margin_top = 82.0
-margin_right = 152.0
-margin_bottom = 122.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="EnemyHealth" type="TextureProgress" parent="CanvasLayer"]
-margin_left = 112.0
-margin_top = -66.0
-margin_right = 152.0
-margin_bottom = -26.0
+margin_left = 66.7451
+margin_top = 28.2599
+margin_right = 130.745
+margin_bottom = 92.2599
+texture_progress = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
-margin_left = 59.0
-margin_top = 109.0
-margin_right = 266.0
-margin_bottom = 172.0
+margin_left = 327.701
+margin_top = 510.637
+margin_right = 534.701
+margin_bottom = 573.637
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+[node name="Attack" type="Button" parent="CanvasLayer/Panel"]
 margin_left = 49.4975
 margin_top = 18.3848
 margin_right = 149.497
 margin_bottom = 49.3848
+script = ExtResource( 5 )
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel/Button"]
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Attack"]
 margin_right = 101.0
 margin_bottom = 31.0
 text = "hakkaa"
@@ -48,10 +48,10 @@ __meta__ = {
 }
 
 [node name="Panel2" type="Panel" parent="CanvasLayer"]
-margin_left = 289.517
-margin_top = 110.414
-margin_right = 496.517
-margin_bottom = 173.414
+margin_left = 558.218
+margin_top = 512.051
+margin_right = 765.218
+margin_bottom = 575.051
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -68,3 +68,33 @@ margin_bottom = 14.0
 text = "defens"
 align = 1
 valign = 1
+
+[node name="EnemyHealth" type="ProgressBar" parent="CanvasLayer"]
+margin_right = 4.0
+margin_bottom = 14.0
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/EnemyHealth"]
+margin_left = 45.2548
+margin_top = 59.397
+margin_right = 109.255
+margin_bottom = 123.397
+value = 100.0
+texture_progress = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Josh" type="Sprite" parent="."]
+position = Vector2( 147.078, 463.862 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="enemy" type="Sprite" parent="."]
+position = Vector2( 905.097, 73.5391 )
+scale = Vector2( 20, 10 )
+texture = ExtResource( 2 )
