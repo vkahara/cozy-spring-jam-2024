@@ -1,0 +1,70 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PlayerHealth" type="TextureProgress" parent="CanvasLayer"]
+margin_left = 112.0
+margin_top = 82.0
+margin_right = 152.0
+margin_bottom = 122.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnemyHealth" type="TextureProgress" parent="CanvasLayer"]
+margin_left = 112.0
+margin_top = -66.0
+margin_right = 152.0
+margin_bottom = -26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+margin_left = 59.0
+margin_top = 109.0
+margin_right = 266.0
+margin_bottom = 172.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+margin_left = 49.4975
+margin_top = 18.3848
+margin_right = 149.497
+margin_bottom = 49.3848
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/Button"]
+margin_right = 101.0
+margin_bottom = 31.0
+text = "hakkaa"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="CanvasLayer"]
+margin_left = 289.517
+margin_top = 110.414
+margin_right = 496.517
+margin_bottom = 173.414
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel2"]
+margin_left = 49.4975
+margin_top = 18.3848
+margin_right = 149.497
+margin_bottom = 49.3848
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel2/Button"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "defens"
+align = 1
+valign = 1
