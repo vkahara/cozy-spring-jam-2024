@@ -7,10 +7,6 @@
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02771, 0 )
-mass = 49.11
-gravity_scale = 7.57
 
-[node name="Main" type="Spatial" parent="."]
-
-[node name="World" parent="Main" instance=ExtResource( 2 )]
+[node name="World" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.546245, -0.305351, 0.282706 )
