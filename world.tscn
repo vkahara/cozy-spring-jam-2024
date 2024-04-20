@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://misc/flower3.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://misc/petal2.obj" type="ArrayMesh" id=1]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -65,11 +65,7 @@ transform = Transform( 1, 0, 0, 0, 1.176, 0, 0, 0, 1, 0, -0.144796, 0 )
 shape = SubResource( 6 )
 
 [node name="MeshInstance5" type="MeshInstance" parent="."]
-<<<<<<< Updated upstream
 transform = Transform( 28.962, 0, 0, 0, 35.256, 0, 0, 0, 30.528, 193.156, 17.0121, -10.3612 )
-=======
-transform = Transform( 28.962, 0, 0, 0, 35.256, 0, 0, 0, 30.528, 193.156, 11.5162, -35.8988 )
->>>>>>> Stashed changes
 mesh = SubResource( 5 )
 material/0 = SubResource( 3 )
 
