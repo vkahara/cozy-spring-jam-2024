@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://misc/josh1.png" type="Texture" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://PlayerHealth.gd" type="Script" id=2]
 [ext_resource path="res://battle.gd" type="Script" id=3]
 [ext_resource path="res://EnemyHealth.gd" type="Script" id=4]
 [ext_resource path="res://Attack.gd" type="Script" id=5]
@@ -16,16 +16,6 @@
 script = ExtResource( 3 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PlayerHealth" type="TextureProgress" parent="CanvasLayer"]
-margin_left = 66.7451
-margin_top = 28.2599
-margin_right = 130.745
-margin_bottom = 92.2599
-texture_progress = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Panel" type="Panel" parent="CanvasLayer"]
 margin_left = 327.701
@@ -97,6 +87,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PlayerHealth" type="ProgressBar" parent="CanvasLayer"]
+margin_right = 4.0
+margin_bottom = 14.0
+value = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/PlayerHealth"]
+margin_left = 34.7461
+margin_top = 269.586
+margin_right = 382.746
+margin_bottom = 604.586
+value = 100.0
+texture_progress = ExtResource( 9 )
+tint_under = Color( 0.321569, 0.933333, 0.14902, 1 )
+tint_progress = Color( 0.913725, 0.772549, 0, 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Panel3" type="Panel" parent="CanvasLayer"]
 margin_left = 322.583
 margin_top = 165.111
@@ -137,7 +149,6 @@ __meta__ = {
 }
 
 [node name="GameEndPanel" type="Panel" parent="CanvasLayer"]
-visible = false
 margin_right = 1028.0
 margin_bottom = 603.0
 script = ExtResource( 11 )
@@ -146,15 +157,30 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="CanvasLayer/GameEndPanel"]
-margin_left = 136.154
-margin_top = 138.823
-margin_right = 850.154
-margin_bottom = 425.823
+margin_left = 447.482
+margin_top = 369.497
+margin_right = 669.482
+margin_bottom = 470.497
 
 [node name="Label" type="Label" parent="CanvasLayer/GameEndPanel/Button"]
-margin_right = 705.0
-margin_bottom = 286.0
+margin_left = -4.20593
+margin_top = 2.19955
+margin_right = 221.794
+margin_bottom = 104.2
 text = "continue"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/GameEndPanel"]
+margin_left = 343.266
+margin_top = 148.325
+margin_right = 603.266
+margin_bottom = 262.325
+text = "dsfsdf
+"
 align = 1
 valign = 1
 __meta__ = {

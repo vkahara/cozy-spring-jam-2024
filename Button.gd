@@ -1,4 +1,4 @@
-# AttackButton.gd
+# AttackButton.gd (attached to the second Attack Button in the mini-game)
 
 extends Button
 
@@ -6,9 +6,8 @@ func _ready():
 	connect("pressed", self, "_on_AttackButton_pressed")
 
 func _on_AttackButton_pressed():
-	# The PowerBar is under a sibling node called Panel3.
-	var power_bar = get_node("../../Panel3/PowerBar")
-	if power_bar.move_direction != 0:
-		power_bar.stop_filling()
-	else:
-		power_bar.start_filling()
+	# Assuming ProgressBar.gd is attached to the PowerBar and it has a stop_filling function.
+	var power_bar = get_node("../PowerBar")
+	power_bar.stop_filling()
+	# Call end_player_turn on the battle.gd script attached to Node2D.
+	get_node("/root/Node2D").end_player_turn()

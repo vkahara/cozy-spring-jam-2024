@@ -53,8 +53,19 @@ material/0 = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, 1.176, 0, 0, 0, 1, 0, -0.144796, 0 )
 shape = SubResource( 6 )
 
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 28.962, 0, 0, 0, 35.256, 0, 0, 0, 30.528, 138.099, 2.53198, -10.3612 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance4/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1.176, 0, 0, 0, 1, 0, -0.144796, 0 )
+shape = SubResource( 6 )
+
 [node name="MeshInstance5" type="MeshInstance" parent="."]
-transform = Transform( 28.962, 0, 0, 0, 35.256, 0, 0, 0, 30.528, 193.156, 17.0121, -35.8988 )
+transform = Transform( 28.962, 0, 0, 0, 35.256, 0, 0, 0, 30.528, 193.156, 17.0121, -10.3612 )
 mesh = SubResource( 5 )
 material/0 = SubResource( 3 )
 
@@ -67,19 +78,19 @@ shape = SubResource( 6 )
 [node name="flower" type="MeshInstance" parent="."]
 transform = Transform( 49.9965, 0.588162, 0, -0.588162, 49.9965, 0, 0, 0, 50, -28.7, -99.0276, -0.495323 )
 mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
 
 [node name="StaticBody" type="StaticBody" parent="flower"]
 
 [node name="CollisionShape" type="CollisionShape" parent="flower/StaticBody"]
-transform = Transform( -0.8, 3.49246e-10, 1.20797e-07, 2.79397e-09, 0.1, -3.33067e-16, -1.20797e-07, 0, -0.8, -0.00294757, 2.08768, -0.0036999 )
-shape = SubResource( 7 )
-
-[node name="flower2" type="MeshInstance" parent="."]
-transform = Transform( 49.9965, 0.588162, 0, -0.588162, 49.9965, 0, 0, 0, 50, 124.504, -71.7762, -0.495323 )
-mesh = ExtResource( 1 )
-
-[node name="StaticBody" type="StaticBody" parent="flower2"]
-
-[node name="CollisionShape" type="CollisionShape" parent="flower2/StaticBody"]
-transform = Transform( -0.8, 3.49246e-10, 1.20797e-07, 2.79397e-09, 0.1, -3.33067e-16, -1.20797e-07, 0, -0.8, -0.00284362, 2.07884, -0.0036999 )
+transform = Transform( -0.8, 0, 1.20797e-07, 0, 0.1, 0, -1.20797e-07, 0, -0.8, -0.00210238, 2.01582, -0.0036999 )
 shape = SubResource( 7 )
