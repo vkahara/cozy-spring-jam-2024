@@ -1,7 +1,7 @@
 # Blender MTL File: 'flower3.blend'
 # Material Count: 10
 
-newmtl CenterMaterial.010
+newmtl CenterMaterial.012
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 1.000000 0.000000
@@ -11,7 +11,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_0.037
+newmtl PetalMaterial_0.041
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -21,7 +21,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_0.038
+newmtl PetalMaterial_0.042
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -31,7 +31,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_1.030
+newmtl PetalMaterial_1.032
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -41,7 +41,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_2.031
+newmtl PetalMaterial_2.033
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -51,7 +51,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_3.034
+newmtl PetalMaterial_3.038
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -61,7 +61,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_3.035
+newmtl PetalMaterial_3.039
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -71,7 +71,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_4.030
+newmtl PetalMaterial_4.032
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -81,7 +81,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl PetalMaterial_5.030
+newmtl PetalMaterial_5.032
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 1.000000 0.700000 0.700000
@@ -91,7 +91,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 
-newmtl StemMaterial.007
+newmtl StemMaterial.009
 Ns 323.999994
 Ka 1.000000 1.000000 1.000000
 Kd 0.000000 0.500000 0.000000
