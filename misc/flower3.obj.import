@@ -16,4 +16,9 @@ dest_files=[ "res://.import/flower3.obj-e7f782d189d8048e243fb86ad1b24580.mesh", 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
 offset_mesh=Vector3( 0, 0, 0 )
+<<<<<<< Updated upstream
 optimize_mesh=true
+=======
+octahedral_compression=true
+optimize_mesh_flags=4286
+>>>>>>> Stashed changes
