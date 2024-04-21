@@ -1,4 +1,4 @@
-# Button.gd (attached to the second Attack Button in the mini-game)
+# Node2D/CanvasLayer/Panel3/Button.gd (attached to the second Attack Button in the mini-game)
 
 extends Button
 

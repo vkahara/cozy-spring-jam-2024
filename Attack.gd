@@ -1,4 +1,4 @@
-# attack.gd (button to open the attack-mini-game)
+# Node2D/CanvasLayer/AttackButtonPanel/attack.gd (button to open the attack-mini-game)
 extends Button
 
 func _ready():

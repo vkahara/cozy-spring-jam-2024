@@ -1,4 +1,4 @@
-#battle.gd
+#battle.gd atttached to Node2D
 
 extends Node2D
 
@@ -36,8 +36,8 @@ func player_turn():
 	# Show the player attack panel (mini-game).
 	# $CanvasLayer/Panel3.visible = true   # Remove this line to prevent automatic opening.
 	# Disable the outer attack button while the mini-game is active.
-	$CanvasLayer/Panel2/Button.disabled = true
-	$CanvasLayer/Panel/Attack.disabled = false   # Make sure this is enabled so the player can initiate the mini-game.
+	$CanvasLayer/HealButtonPanel/HealButton.disabled = false
+	$CanvasLayer/AttackButtonPanel/Attack.disabled = false   # Make sure this is enabled so the player can initiate the mini-game.
 
 
 func enemy_turn():

@@ -1,4 +1,4 @@
-# EnemyHealth.gd
+#  Node2D/CanvasLayer/EnemyHealth/EnemyHealth.gd (this script is attached to textureprogress which is attached to a progressbar)
 
 extends TextureProgress
 

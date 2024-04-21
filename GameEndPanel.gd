@@ -1,4 +1,4 @@
-#GameEndPanel.gd
+#Node2D/CanvasLayer/GameEndPanel.gd
 
 extends Panel
 

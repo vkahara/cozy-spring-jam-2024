@@ -1,4 +1,5 @@
-# PlayerHealth.gd
+# Node2D/CanvasLayer/Playerhealth/PlayerHealth.gd
+# (this script is attached to textureprogress which is attached to a progressbar)
 
 extends TextureProgress
 
@@ -13,6 +14,13 @@ func take_damage(damage):
 	if value <= 0:
 		game_over()
 
+
+func heal(amount):
+	value += amount
+	value = min(value, max_value)  # Ensure we don't go over max health
+	print("Healing applied, new health: ", value)
+	
+	
 func game_over():
 	print("Player defeated!")
 	# Here you would handle the player's defeat, such as showing a defeat screen or restarting the game.
