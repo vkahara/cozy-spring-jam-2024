@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://misc/petal2.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ImageTexture" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.180392, 0.615686, 0.0235294, 1 )
+albedo_texture = SubResource( 2 )
+
+[sub_resource type="BoxShape" id=4]
+
+[sub_resource type="CubeMesh" id=5]
+
+[sub_resource type="BoxShape" id=6]
+
+[sub_resource type="CylinderShape" id=7]
+
+[node name="World" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 300, 0, 0, 0, 1, 0, 0, 0, 300, 0, -72.0993, 0.39612 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0035293, 0.708397, -0.0243724 )
+shape = SubResource( 4 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 60, 0, 0, 0, 50, 0, 0, 0, 150, 153.196, -95.2087, -10.3612 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance4/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1.176, 0, 0, 0, 1, 0, -0.144796, 0 )
+shape = SubResource( 6 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+transform = Transform( 28.962, 0, 0, 0, 35.256, 0, 0, 0, 30.528, 193.156, -53.1161, -10.3612 )
+mesh = SubResource( 5 )
+material/0 = SubResource( 3 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance5/StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1.176, 0, 0, 0, 1, 0, -0.144796, 0 )
+shape = SubResource( 6 )
+
+[node name="flower" type="MeshInstance" parent="."]
+transform = Transform( 49.9965, 0.588162, 0, -0.588162, 49.9965, 0, 0, 0, 50, 260.928, -109.327, -9.16875 )
+mesh = ExtResource( 1 )
+
+[node name="StaticBody" type="StaticBody" parent="flower"]
+
+[node name="CollisionShape" type="CollisionShape" parent="flower/StaticBody"]
+transform = Transform( -0.8, 1.16415e-10, 1.20797e-07, 9.31323e-10, 0.1, -1.11022e-16, -1.20797e-07, 0, -0.8, -0.00210232, 2.01582, -0.0036999 )
+shape = SubResource( 7 )
