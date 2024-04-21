@@ -170,24 +170,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="CanvasLayer/GameEndPanel"]
-margin_left = 447.482
-margin_top = 369.497
-margin_right = 669.482
-margin_bottom = 470.497
-
-[node name="Label" type="Label" parent="CanvasLayer/GameEndPanel/Button"]
-margin_left = -4.20593
-margin_top = 2.19955
-margin_right = 221.794
-margin_bottom = 104.2
-text = "continue"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Label" type="Label" parent="CanvasLayer/GameEndPanel"]
 margin_left = 343.266
 margin_top = 148.325

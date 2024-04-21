@@ -12,22 +12,15 @@ var flaps_left = max_flaps  # Current number of flaps left
 
 var sound_played = false
 
-func switch_to_battle_scene():
-	# Assuming your battle scene is saved as "res://BattleScene.tscn"
-	var battle_scene = preload("res://battle.tscn").instance()
-	# Remove the current scene
-	get_tree().current_scene.queue_free()
-	# Add the new scene
-	get_tree().root.add_child(battle_scene)
-	# Make it the current scene
-	get_tree().set_current_scene(battle_scene)
+func _ready():
+	add_to_group("players")
 
 
 # Physics process runs every fixed frame
 func _physics_process(delta):
 	var forward_backward = 0
 	var rotation_dir = 0
-
+	
 	# Check for movement and rotation input.
 	if Input.is_action_pressed("ui_up"):  # Move forward
 		forward_backward += 1
@@ -37,13 +30,12 @@ func _physics_process(delta):
 		rotation_dir -= 1
 	if Input.is_action_pressed("ui_left"):  # Rotate right
 		rotation_dir += 1
-	
+
 	# Handle flapping if flaps are available.
 	if Input.is_action_just_pressed("flap") and flaps_left > 0:
 		vertical_velocity = flap_power
 		flaps_left -= 1  # Decrease flap count
 		$AudioStreamPlayer3D.play()
-
 
 	# Apply gravity to the vertical velocity
 	vertical_velocity += gravity * delta
@@ -60,5 +52,3 @@ func _physics_process(delta):
 
 	# Move the player.
 	move_and_slide(movement, Vector3.UP)
-	
-	
