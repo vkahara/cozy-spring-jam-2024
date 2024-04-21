@@ -12,6 +12,17 @@ var flaps_left = max_flaps  # Current number of flaps left
 
 var sound_played = false
 
+func switch_to_battle_scene():
+	# Assuming your battle scene is saved as "res://BattleScene.tscn"
+	var battle_scene = preload("res://battle.tscn").instance()
+	# Remove the current scene
+	get_tree().current_scene.queue_free()
+	# Add the new scene
+	get_tree().root.add_child(battle_scene)
+	# Make it the current scene
+	get_tree().set_current_scene(battle_scene)
+
+
 # Physics process runs every fixed frame
 func _physics_process(delta):
 	var forward_backward = 0
@@ -49,3 +60,5 @@ func _physics_process(delta):
 
 	# Move the player.
 	move_and_slide(movement, Vector3.UP)
+	
+	

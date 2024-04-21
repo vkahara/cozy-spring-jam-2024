@@ -1,6 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://misc/petal2.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://misc/dickhead.png" type="Texture" id=2]
+[ext_resource path="res://world.gd" type="Script" id=3]
+
+[sub_resource type="QuadMesh" id=8]
+size = Vector2( 20, 20 )
+
+[sub_resource type="SpatialMaterial" id=9]
+flags_transparent = true
+params_billboard_mode = 2
+albedo_texture = ExtResource( 2 )
+metallic_texture = ExtResource( 2 )
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -19,6 +30,12 @@ albedo_texture = SubResource( 2 )
 [sub_resource type="CylinderShape" id=7]
 
 [node name="World" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Enemy" type="MeshInstance" parent="."]
+transform = Transform( 9.99995, -0.0326376, 0, 0.0326376, 9.99995, 0, 0, 0, 10, 140.642, 45.8046, -0.680418 )
+mesh = SubResource( 8 )
+material/0 = SubResource( 9 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 300, 0, 0, 0, 1, 0, 0, 0, 300, 0, -72.0993, 0.39612 )
