@@ -1,3 +1,5 @@
+#GameEndPanel.gd
+
 extends Panel
 
 func _ready():

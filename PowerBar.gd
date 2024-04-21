@@ -1,3 +1,5 @@
+#powerbar.gd
+
 extends ProgressBar
 
 signal attack_made(damage)

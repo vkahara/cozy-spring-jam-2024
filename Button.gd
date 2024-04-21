@@ -1,4 +1,4 @@
-# AttackButton.gd (attached to the second Attack Button in the mini-game)
+# Button.gd (attached to the second Attack Button in the mini-game)
 
 extends Button
 

@@ -32,6 +32,9 @@ margin_top = 18.3848
 margin_right = 149.497
 margin_bottom = 49.3848
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel/Attack"]
 margin_right = 101.0
@@ -110,6 +113,7 @@ __meta__ = {
 }
 
 [node name="Panel3" type="Panel" parent="CanvasLayer"]
+visible = false
 margin_left = 322.583
 margin_top = 165.111
 margin_right = 693.583
@@ -149,6 +153,7 @@ __meta__ = {
 }
 
 [node name="GameEndPanel" type="Panel" parent="CanvasLayer"]
+visible = false
 margin_right = 1028.0
 margin_bottom = 603.0
 script = ExtResource( 11 )

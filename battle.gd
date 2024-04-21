@@ -1,3 +1,5 @@
+#battle.gd
+
 extends Node2D
 
 enum Turn { PLAYER, ENEMY }
@@ -32,9 +34,11 @@ func take_damage(target, amount):
 func player_turn():
 	current_turn = Turn.PLAYER
 	# Show the player attack panel (mini-game).
-	$CanvasLayer/Panel3.visible = true
+	# $CanvasLayer/Panel3.visible = true   # Remove this line to prevent automatic opening.
 	# Disable the outer attack button while the mini-game is active.
 	$CanvasLayer/Panel2/Button.disabled = true
+	$CanvasLayer/Panel/Attack.disabled = false   # Make sure this is enabled so the player can initiate the mini-game.
+
 
 func enemy_turn():
 	current_turn = Turn.ENEMY
@@ -53,6 +57,7 @@ func enemy_turn():
 
 func _ready():
 	randomize()  # Initialize random number generator.
+	$CanvasLayer/Panel3.visible = false
 	player_turn()  # Start with the player's turn.
 	connect_health_bars()
 	
