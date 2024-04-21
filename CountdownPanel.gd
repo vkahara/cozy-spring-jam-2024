@@ -45,6 +45,7 @@ func finish_mini_game():
 	
 	# Ensure that healing is applied with the current clicks count
 	var player_health_node = get_node("/root/Node2D/CanvasLayer/PlayerHealth/TextureProgress")
+
 	if player_health_node:
 		print("Applying healing. Clicks count: ", clicks)
 		player_health_node.heal(clicks)  # Call the heal function with the current clicks count
